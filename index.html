@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Caffè Studio — 3D Coffee Store</title>
+    <meta name="description" content="Immersive 3D coffee store. Explore blends, savor visuals, and shop with style." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">Caffè Studio</a>
+        <nav class="nav">
+          <a href="#home">Home</a>
+          <a href="#blends">Blends</a>
+          <a href="#bestsellers">Best Sellers</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="btn btn-primary" href="#bestsellers">Shop now</a>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1><span class="accent">Brewed</span> to Perfection</h1>
+            <p>Small-batch roasts, ethically sourced, roasted fresh daily. Immerse yourself in our 3D café and discover your perfect cup.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#bestsellers">Shop Blends</a>
+              <a class="btn btn-ghost" href="#blends">Explore</a>
+            </div>
+            <ul class="hero-stats">
+              <li><strong>25+</strong><span>Signature blends</span></li>
+              <li><strong>100% </strong><span>Arabica</span></li>
+              <li><strong>48H</strong><span>Freshness</span></li>
+            </ul>
+          </div>
+          <div class="hero-visual">
+            <div id="scene-container" aria-label="Interactive 3D coffee cup" role="img"></div>
+            <noscript>
+              <div class="no-js-fallback">Enable JavaScript to experience the 3D scene.</div>
+            </noscript>
+          </div>
+        </div>
+      </section>
+
+      <section id="blends" class="carousel-section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Signature Blends</h2>
+            <div class="carousel-controls">
+              <button class="carousel-btn prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn next" aria-label="Next">›</button>
+            </div>
+          </div>
+          <div class="carousel-track" tabindex="0" aria-label="Coffee blends gallery">
+            <figure class="card">
+              <img loading="lazy" src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1200&auto=format&fit=crop" data-large="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=2400&auto=format&fit=crop" alt="Espresso shot pouring into a cup" />
+              <figcaption>Velvet Espresso</figcaption>
+            </figure>
+            <figure class="card">
+              <img loading="lazy" src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=1200&auto=format&fit=crop" data-large="https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=2400&auto=format&fit=crop" alt="Cappuccino with latte art" />
+              <figcaption>Artisan Cappuccino</figcaption>
+            </figure>
+            <figure class="card">
+              <img loading="lazy" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop" data-large="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2400&auto=format&fit=crop" alt="Pour-over coffee setup" />
+              <figcaption>Pour-over Classic</figcaption>
+            </figure>
+            <figure class="card">
+              <img loading="lazy" src="https://images.unsplash.com/photo-1432107294469-414527cb5c65?q=80&w=1200&auto=format&fit=crop" data-large="https://images.unsplash.com/photo-1432107294469-414527cb5c65?q=80&w=2400&auto=format&fit=crop" alt="Coffee beans on burlap" />
+              <figcaption>House Roast</figcaption>
+            </figure>
+            <figure class="card">
+              <img loading="lazy" src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1200&auto=format&fit=crop" data-large="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=2400&auto=format&fit=crop" alt="Iced coffee with straw" />
+              <figcaption>Cold Brew</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="bestsellers" class="products">
+        <div class="container">
+          <h2>Best Sellers</h2>
+          <div class="product-grid">
+            <article class="product">
+              <img loading="lazy" src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1200&auto=format&fit=crop" alt="Coffee bag and cup" />
+              <h3>Midnight Roast</h3>
+              <p class="price">$16</p>
+              <button class="btn btn-secondary">Add to cart</button>
+            </article>
+            <article class="product">
+              <img loading="lazy" src="https://images.unsplash.com/photo-1459755486867-b55449bb39ff?q=80&w=1200&auto=format&fit=crop" alt="Espresso beans" />
+              <h3>Silk Espresso</h3>
+              <p class="price">$18</p>
+              <button class="btn btn-secondary">Add to cart</button>
+            </article>
+            <article class="product">
+              <img loading="lazy" src="https://images.unsplash.com/photo-1509043759401-136742328bb3?q=80&w=1200&auto=format&fit=crop" alt="Latte in ceramic mug" />
+              <h3>Amber Latte</h3>
+              <p class="price">$14</p>
+              <button class="btn btn-secondary">Add to cart</button>
+            </article>
+            <article class="product">
+              <img loading="lazy" src="https://images.unsplash.com/photo-1439804123629-203f071683a0?q=80&w=1200&auto=format&fit=crop" alt="Pour over brewing kit" />
+              <h3>Drip Master</h3>
+              <p class="price">$22</p>
+              <button class="btn btn-secondary">Add to cart</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container about-grid">
+          <div>
+            <h2>About Caffè Studio</h2>
+            <p>We partner directly with farms to source exceptional beans. Our roasters craft balance and nuance into every bag—so your morning ritual feels like a small celebration.</p>
+            <p>Visit our café, explore the 3D scene, and linger a little longer.</p>
+          </div>
+          <div class="about-image">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=1200&auto=format&fit=crop" alt="Cozy coffee shop interior" />
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2>Stay in touch</h2>
+          <form class="newsletter" action="#" method="post" onsubmit="return false;">
+            <input type="email" placeholder="Your email" aria-label="Email address" required />
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Caffè Studio. Crafted with ❤️ and caffeine.</p>
+        <p class="credits">Images from Unsplash.</p>
+      </div>
+    </footer>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+      <button class="lightbox-close" aria-label="Close">×</button>
+      <img id="lightbox-img" alt="Expanded view" />
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
