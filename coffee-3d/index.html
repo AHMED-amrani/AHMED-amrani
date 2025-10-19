@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Immersive 3D coffee experience with an interactive cup, curated images, and smooth scrolling." />
+  <title>Roast & Render — 3D Coffee Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="brand">Roast<span>&</span>Render</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero">
+    <div id="three-root" class="three-root" aria-label="Interactive 3D coffee cup" role="img"></div>
+    <div class="hero-overlay">
+      <h1>Crafted in 3D. Brewed for You.</h1>
+      <p>Explore a tactile coffee world with an interactive 3D cup, rich imagery, and silky smooth motion.</p>
+      <a class="cta" href="#gallery">Browse Beans</a>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>Curated Coffee Moments</h2>
+    <div class="grid">
+      <!-- Using high-quality Unsplash images with proper attribution in alt text -->
+      <figure>
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1600&auto=format&fit=crop" alt="Close-up of latte art in a ceramic cup (Photo: Nathan Dumlao on Unsplash)" />
+        <figcaption>Latte Art</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=1600&auto=format&fit=crop" alt="Roasted coffee beans (Photo: Mike Kenneally on Unsplash)" />
+        <figcaption>Roasted Beans</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1600&auto=format&fit=crop" alt="Pour-over coffee setup (Photo: Karl Fredrickson on Unsplash)" />
+        <figcaption>Pour-Over Ritual</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1445077100181-a33e9ac94db0?q=80&w=1600&auto=format&fit=crop" alt="Espresso machine pulling a shot (Photo: Tyler Nix on Unsplash)" />
+        <figcaption>Espresso Shot</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1474625341624-b5d1c4038b66?q=80&w=1600&auto=format&fit=crop" alt="Coffee in a rustic mug with beans (Photo: Przemyslaw Marczynski on Unsplash)" />
+        <figcaption>Rustic Mug</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?q=80&w=1600&auto=format&fit=crop" alt="Cafe interior with warm lighting (Photo: Crew on Unsplash)" />
+        <figcaption>Café Vibes</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="content">
+      <h2>About the Blend</h2>
+      <p>
+        Roast & Render is a playful blend of craftsmanship and code. The 3D scene is rendered with Three.js, pairing a simple, stylized cup with subtle lighting and depth-of-field to evoke cozy café energy.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! We\'ll reach out soon.');">
+      <label>
+        Name
+        <input type="text" required placeholder="Your name" />
+      </label>
+      <label>
+        Email
+        <input type="email" required placeholder="you@example.com" />
+      </label>
+      <label>
+        Message
+        <textarea rows="4" required placeholder="Say hello...\n"></textarea>
+      </label>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Roast & Render. Crafted with beans and beams.</p>
+  </footer>
+
+  <!-- Three.js via CDN -->
+  <script type="module" src="https://unpkg.com/three@0.160.0/build/three.module.js"></script>
+  <script type="module" src="https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
