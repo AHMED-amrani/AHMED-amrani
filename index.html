@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Caffè 3D Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="Caffè" class="logo" />
+      <span class="brand-name">Caffè</span>
+    </div>
+    <nav class="nav">
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1>Discover Coffee in 3D</h1>
+        <p>Small-batch roasts, immersive visuals, and rich aromas—shop our best beans.</p>
+        <div class="cta-row">
+          <a href="#products" class="btn primary">Shop Now</a>
+          <button class="btn ghost" id="toggle-rotate">Pause Rotation</button>
+        </div>
+      </div>
+      <div class="carousel-3d" aria-label="Featured roasts carousel">
+        <div class="carousel-ring" id="carousel-ring">
+          <!-- Cards are injected by JS -->
+        </div>
+        <div class="carousel-controls">
+          <button class="ctrl" id="prev" aria-label="Previous">&#10094;</button>
+          <button class="ctrl" id="next" aria-label="Next">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="products">
+      <h2>Bestsellers</h2>
+      <div class="product-grid" id="product-grid">
+        <!-- Product cards injected by JS -->
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about-inner">
+        <h2>About Caffè</h2>
+        <p>We partner with sustainable farms to source the highest quality beans. Roasted weekly, shipped fresh.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <form class="contact-form" onsubmit="return false;">
+        <input type="text" placeholder="Your name" required />
+        <input type="email" placeholder="Email address" required />
+        <textarea placeholder="Message" rows="4" required></textarea>
+        <button class="btn primary" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Caffè. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
