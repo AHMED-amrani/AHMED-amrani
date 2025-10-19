@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brewed in 3D • Coffee Experience</title>
+    <meta name="description" content="A modern 3D coffee experience with an interactive cup, rich imagery, and smooth storytelling.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="#hero" aria-label="Brewed in 3D home">Brewed<span>3D</span></a>
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-menu">☰</button>
+        <ul id="primary-menu" class="nav__links" role="menu">
+          <li role="none"><a role="menuitem" href="#beans">Beans</a></li>
+          <li role="none"><a role="menuitem" href="#gallery">Gallery</a></li>
+          <li role="none"><a role="menuitem" href="#visit">Visit</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <!-- Hero -->
+      <section id="hero" class="hero" aria-label="Interactive coffee hero">
+        <div class="hero__canvas-wrap" aria-hidden="true">
+          <canvas id="hero-canvas" aria-label="3D coffee cup" role="img"></canvas>
+        </div>
+        <div class="hero__content">
+          <h1><span class="accent">Brewed</span> to Perfection</h1>
+          <p>Explore coffee in a whole new dimension. Spin the cup, see the steam, feel the craft.</p>
+          <div class="hero__cta">
+            <a href="#beans" class="btn btn--primary">Our Beans</a>
+            <a href="#gallery" class="btn btn--ghost">See Gallery</a>
+          </div>
+        </div>
+        <button class="skip" data-scroll="#beans" aria-label="Scroll to content">▿</button>
+      </section>
+
+      <!-- Beans section -->
+      <section id="beans" class="section" aria-labelledby="beans-title" data-reveal>
+        <div class="container">
+          <div class="grid grid--2">
+            <div class="stack">
+              <h2 id="beans-title">Single‑origin beans, roasted for flavor</h2>
+              <p>We source ethical, small‑lot coffees and roast with precision to unlock nuanced notes — chocolate, citrus, florals — tailored to every brew method.</p>
+              <ul class="features">
+                <li><span class="badge">Fresh</span> Roasted weekly</li>
+                <li><span class="badge">Ethical</span> Direct‑trade partners</li>
+                <li><span class="badge">Precise</span> Profile‑driven roasts</li>
+              </ul>
+            </div>
+            <div class="media">
+              <img src="https://source.unsplash.com/960x960/?coffee,beans&sig=13" alt="Close-up of freshly roasted coffee beans" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section id="gallery" class="section section--alt" aria-labelledby="gallery-title" data-reveal>
+        <div class="container">
+          <h2 id="gallery-title">Gallery</h2>
+          <p class="subtle">A taste of our craft and community</p>
+          <div class="gallery" role="list">
+            <figure class="card" role="listitem"><img src="https://source.unsplash.com/800x600/?coffee,latte&sig=1" alt="Latte art in a ceramic cup" loading="lazy"></figure>
+            <figure class="card" role="listitem"><img src="https://source.unsplash.com/800x600/?espresso,barista&sig=2" alt="Barista pulling a perfect espresso shot" loading="lazy"></figure>
+            <figure class="card" role="listitem"><img src="https://source.unsplash.com/800x600/?coffee,pour-over&sig=3" alt="Pour-over coffee dripping into a carafe" loading="lazy"></figure>
+            <figure class="card" role="listitem"><img src="https://source.unsplash.com/800x600/?coffee,cafe&sig=4" alt="Cozy cafe interior" loading="lazy"></figure>
+            <figure class="card" role="listitem"><img src="https://source.unsplash.com/800x600/?coffee,beans&sig=5" alt="Roasted coffee beans on a table" loading="lazy"></figure>
+            <figure class="card" role="listitem"><img src="https://source.unsplash.com/800x600/?coffee, cappuccino&sig=6" alt="Cappuccino with cocoa dusting" loading="lazy"></figure>
+            <figure class="card" role="listitem"><img src="https://source.unsplash.com/800x600/?coffee,filter&sig=7" alt="Filter coffee with steam rising" loading="lazy"></figure>
+            <figure class="card" role="listitem"><img src="https://source.unsplash.com/800x600/?coffee,plant&sig=8" alt="Coffee plant cherries on a branch" loading="lazy"></figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Visit -->
+      <section id="visit" class="section" aria-labelledby="visit-title" data-reveal>
+        <div class="container">
+          <div class="grid grid--2">
+            <div class="stack">
+              <h2 id="visit-title">Visit us</h2>
+              <p>123 Origin Lane, Roast City • Daily 7am‑6pm</p>
+              <p><strong>Pro tip:</strong> Order a seasonal pour‑over and compare notes with our baristas.</p>
+              <a class="btn btn--primary" href="#hero">Back to top</a>
+            </div>
+            <div class="media">
+              <img src="https://source.unsplash.com/960x960/?coffee,shop&sig=21" alt="Exterior of a modern coffee shop" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container footer__inner">
+        <p>© <span id="year"></span> Brewed3D. Crafted with care.</p>
+        <a href="#main" class="backtotop">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <!-- App scripts -->
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
